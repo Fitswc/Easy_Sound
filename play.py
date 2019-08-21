@@ -5,12 +5,9 @@ import pygame as game
 
 game.mixer.init()
 
-def play (endswith,sound,time):
-    if endswith == "wav":
-        play = game.mixer.Sound(sound)
-        play.play()
-    if endswith == "mp3":
-        playsound(sound)
+def play(sound):
+    playsound(sound)
+def
 
 
 
