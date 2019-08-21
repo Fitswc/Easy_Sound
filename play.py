@@ -5,13 +5,15 @@ import pygame as game
 
 game.mixer.init()
 
-def play (endswith,sound,vol):
+def play (endswith,sound,time):
     if endswith == "wav":
         play = game.mixer.Sound(sound)
-        play.set_volume(vol)
         play.play()
-    else:
-        game .mixer.load(sound)
+    if endswith == "mp3":
+        playsound(sound)
+
+play("ogg","test.ogg",100)
+
 
 
 
