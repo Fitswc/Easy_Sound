@@ -1,13 +1,17 @@
 import pyaudio
 import wave
 
-CHUNK = 1024
-FORMAT = pyaudio.paInt16
-CHANNELS = 2
-RATE = 16000
-RECORD_SECONDS = 2
 
-def rec(file_name,startmsg,endmsg):
+
+def rec(file_name,seconds,startmsg,endmsg):
+
+
+    CHUNK = 1024
+    FORMAT = pyaudio.paInt16
+    CHANNELS = 2
+    RATE = 16000
+    RECORD_SECONDS = seconds
+
     p = pyaudio.PyAudio()
 
     stream = p.open(format=FORMAT,
