@@ -10,6 +10,8 @@ def play (endswith,sound,vol):
         play = game.mixer.Sound(sound)
         play.set_volume(vol)
         play.play()
+    else:
+        game .mixer.load(sound)
 
 
 
