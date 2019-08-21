@@ -1,12 +1,15 @@
-import pygame
-from pygame.locals import *
 from playsound import playsound
 from time import sleep
+import pygame as game
+#import library
 
-def playmp3 (sound):
-    playsound(sound)
+game.mixer.init()
 
-playmp3('test.mp3')
+def play (endswith,sound,vol):
+    if endswith == "wav":
+        play = game.mixer.Sound(sound)
+        play.set_volume(vol)
+        play.play()
 
-def play (sound,vol = 10):
-    pygame
+
+
