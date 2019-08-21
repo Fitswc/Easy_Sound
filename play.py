@@ -12,7 +12,6 @@ def play (endswith,sound,time):
     if endswith == "mp3":
         playsound(sound)
 
-play("ogg","test.ogg",100)
 
 
 
